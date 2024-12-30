@@ -1,6 +1,5 @@
 using this projects we need to do setup for eurekaserver ,eurekaclient,feignclient.
 
-===============================================================
 Steps to develop Service Registry Application (Eureka Server)
 ===============================================================
 
@@ -29,7 +28,6 @@ Note-2 : If service-registry project running on any other port number then we ha
 		URL : http://localhost:8761/
 ======================================
 Steps to develop Eureka client
-======================================
 
 1) Create SpringBoot application with below dependency
 
@@ -70,7 +68,7 @@ public class ServiceARestController {
 
 ======================================
 Steps to develop Feign client
-======================================
+
 To enable inter-service communication between two services using Feign Client, you'll need to follow these steps:
 
 Ensure that both services are registered with Eureka.
