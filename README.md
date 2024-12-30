@@ -117,7 +117,8 @@ public class ServiceARestController {
 }
 6)Once application started we can access Eureka Dashboard using below URL
 
-URL : http://localhost:8092/fromfeignclient          //we get data from eurekaclient project endpoint.		
+URL : http://localhost:8092/fromfeignclient          
+//we get data from eurekaclient project endpoint.		
 ===============================================
 
 
