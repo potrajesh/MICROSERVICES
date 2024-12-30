@@ -10,7 +10,7 @@ Steps to develop Service Registry Application (Eureka Server)
 
 2) Configure @EnableEurekaServer annotation in boot start class
 
-3) Configure below properties in application.yml file
+3) Configure below properties in application.properties file
 
 server.port:8761
 spring.application.name=discoverysevice
@@ -38,7 +38,8 @@ Steps to develop Eureka client
 
 3) Configure below properties in application.properties file
 
-# Eureka Client Configuration
+application.properties:
+
 server.port:8090
 spring.application.name=eurekaclient
 eureka.instance.hostname=localhost
@@ -84,7 +85,7 @@ Ensure that both services are registered with Eureka.
 
 3) Configure below properties in application.properties file
 
-# Feign Client Configuration
+application.properties:
 
 server.port:8092
 spring.application.name=eurekaclient2
