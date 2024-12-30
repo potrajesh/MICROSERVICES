@@ -93,9 +93,6 @@ eureka.client.register-with-eureka=true
 eureka.client.service-url.defaultzone=http://localhost:8761/eureka/
 
 4) 
-
-package eurekaserver.eurekaserver;
-
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -105,7 +102,6 @@ public interface ServiceAClient {
     @GetMapping("/helloWorld")  // Mapping to the endpoint you want to call
     String helloWorld();
 }
-
 5)@RestController
 public class ServiceARestController {
 	
@@ -118,12 +114,9 @@ public class ServiceARestController {
 	}
 
 }
-
-
 6)Once application started we can access Eureka Dashboard using below URL
 
-		URL : http://localhost:8092/fromfeignclient          //we get data from eurekaclient project endpoint.
-		
+URL : http://localhost:8092/fromfeignclient          //we get data from eurekaclient project endpoint.		
 ===============================================
 
 
