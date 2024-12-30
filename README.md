@@ -12,11 +12,11 @@ Steps to develop Service Registry Application (Eureka Server)
 
 3) Configure below properties in application.properties file
 
-server.port:8761
-spring.application.name=discoverysevice
-eureka.instance.hostname=localhost
-eureka.client.register-with-eureka=false
-eureka.client.service-url.defaultzone=http://${eureka.instance.hostname}:${server.port}/eureka
+- server.port:8761
+- spring.application.name=discoverysevice
+- eureka.instance.hostname=localhost
+- eureka.client.register-with-eureka=false
+- eureka.client.service-url.defaultzone=http://${eureka.instance.hostname}:${server.port}/eureka
 
 
 Note-1: If "Service-Registry" project port is 8761 then clients can discover service-registry and will register automatically with service-registry. 
@@ -40,11 +40,11 @@ Steps to develop Eureka client
 
 application.properties:
 
-server.port:8090
-spring.application.name=eurekaclient
-eureka.instance.hostname=localhost
-eureka.client.register-with-eureka=true
-eureka.client.service-url.defaultzone=http://localhost:8761/eureka/
+- server.port:8090
+- spring.application.name=eurekaclient
+- eureka.instance.hostname=localhost
+- eureka.client.register-with-eureka=true
+- eureka.client.service-url.defaultzone=http://localhost:8761/eureka/
 
 
 Note-1: If "Service-Registry" project port is 8761 then clients can discover service-registry and will register automatically with service-registry. 
@@ -87,11 +87,11 @@ Ensure that both services are registered with Eureka.
 
 application.properties:
 
-server.port:8092
-spring.application.name=eurekaclient2
-eureka.instance.hostname=localhost
-eureka.client.register-with-eureka=true
-eureka.client.service-url.defaultzone=http://localhost:8761/eureka/
+- server.port:8092
+- spring.application.name=eurekaclient2
+- eureka.instance.hostname=localhost
+- eureka.client.register-with-eureka=true
+- eureka.client.service-url.defaultzone=http://localhost:8761/eureka/
 
 4) 
 import org.springframework.cloud.openfeign.FeignClient;
