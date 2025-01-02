@@ -115,10 +115,47 @@ public class ServiceARestController {
 	}
 
 }
-6)Once application started we can access Eureka Dashboard using below URL
 
+6)Once application started we can access Eureka Dashboard using below URL
 URL : http://localhost:8092/fromfeignclient          
-//we get data from eurekaclient project endpoint.		
+//we get data from eurekaclient project endpoint.	
+
+Hystrix:
+
+Ref: https://resilience4j.readme.io/docs/getting-started-3
+     https://resilience4j.readme.io/docs/circuitbreaker
+
+1) Create SpringBoot application with below dependency
+
+	    <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.github.resilience4j</groupId>
+			<artifactId>resilience4j-spring-boot2</artifactId>
+		</dependency>
+
+
+2)
+	@GetMapping("/from-fault-tolerance")
+	@CircuitBreaker(name="sample-api",fallbackMethod = "getData")
+	public String helloWorld(String str) {
+		log.info("sample api called");
+		if(str==null||str.isEmpty()) {
+		 throw new RuntimeException("getting error");
+		}
+		return null;
+	}
+	
+	public String getData(Exception ex) {
+		return "return from string data";
+	}
+
 ===============================================
 
 
