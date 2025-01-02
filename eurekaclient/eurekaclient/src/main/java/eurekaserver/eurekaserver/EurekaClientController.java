@@ -15,5 +15,7 @@ public class EurekaClientController {
 	public String helloWorld() {
 		return "Hello world from eureka Client 1 !"+"using port number is :"+env.getProperty("server.port");
 	}
+	
+	
 
 }
